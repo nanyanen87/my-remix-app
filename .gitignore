@@ -128,3 +128,12 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+
+/.cache
+/functions/\[\[path\]\].js
+/functions/\[\[path\]\].js.map
+/functions/metafile.*
+/functions/version.txt
+/public/build
+.dev.vars
