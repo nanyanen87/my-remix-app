@@ -137,3 +137,5 @@ dist
 /functions/version.txt
 /public/build
 .dev.vars
+
+.idea/*
