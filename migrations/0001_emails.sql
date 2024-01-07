@@ -1,0 +1,5 @@
+-- Migration number: 0001 	 2024-01-07T17:43:38.310Z
+CREATE TABLE IF NOT EXISTS emails (
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(255) NOT NULL
+);
