@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="979a9e43-045f-49fd-97cd-38a721829f60" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/app.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/data.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/contacts.$contactId.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/contacts.$contactId.destroy.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/0000_users.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrations/0000_users.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/0001_emails.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrations/0001_emails.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seed.sql" beforeDir="false" afterPath="$PROJECT_DIR$/db/seed/seed.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrangler.toml" beforeDir="false" afterPath="$PROJECT_DIR$/wrangler.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +41,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/routes" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -62,6 +54,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/routes" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
   </component>
@@ -76,7 +69,7 @@
       <workItem from="1704295307682" duration="115000" />
       <workItem from="1704311178975" duration="1114000" />
       <workItem from="1704363046144" duration="306000" />
-      <workItem from="1705157871959" duration="9035000" />
+      <workItem from="1705157871959" duration="11474000" />
     </task>
     <servers />
   </component>
