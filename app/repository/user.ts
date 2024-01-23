@@ -32,17 +32,28 @@ export const fetchAllUsers = async (env: Env): Promise<User[]> => {
   return results;
 }
 
+// export const fetchOneUser = async (env: Env, id: number): Promise<User> => {
+//   const qb = new D1QB(env.DB);
+//   const fetched = await qb.fetchOne({
+//     tableName: 'users',
+//     fields: '*',
+//     where: {
+//       conditions: 'id = ?1',
+//       params: [id],
+//     },
+//   }).execute();
+//   console.dir(fetched.results, {depth: null});
+//   return fetched;
+// }
+
 export const fetchOneUser = async (env: Env, id: number): Promise<User> => {
-  const qb = new D1QB(env.DB);
-  const fetched = await qb.fetchOne({
-    tableName: 'users',
-    fields: '*',
-    where: {
-      conditions: 'id = ?1',
-      params: [id],
-    },
-  }).execute();
-  console.dir(fetched.results, {depth: null});
+  // const stmt = await env.DB.prepare(`select * from users where id = ?1`).bind(id);
+  // const res = await stmt.all();
+  // console.dir(res.results[0], {depth: null});
+
+  const res = await env.DB.prepare(`select * from users where id = ?1`).bind(id).raw();
+  console.dir(res[0], {depth: null});
+  // console.log(res.results.map((r) => r.first));
   return fetched;
 }
 
