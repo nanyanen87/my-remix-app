@@ -26,16 +26,16 @@ export const loader = async ({
   return json({ user: result });
 }
 
-// export const action = async ({
-//   params,
-//   request,
-// }: ActionFunctionArgs) => {
-//   invariant(params.userId, "Missing contactId param");
-//   const formData = await request.formData();
-//   return updateContact(params.userId, {
-//     favorite: formData.get("favorite") === "true",
-//   });
-// }
+export const action = async ({
+  params,
+  request,
+}: ActionFunctionArgs) => {
+  invariant(params.userId, "Missing contactId param");
+  const formData = await request.formData();
+  return updateContact(params.userId, {
+    favorite: formData.get("favorite") === "true",
+  });
+}
 
 
 export default function User() {
@@ -98,3 +98,25 @@ export default function User() {
     </div>
   );
 }
+
+const Favorite: FunctionComponent<{
+  user: Pick<ContactRecord, "favorite">;
+}> = ({ user }) => {
+  const favorite = user.favorite;
+
+  return (
+    <Form method="post">
+      <button
+        aria-label={
+          favorite
+            ? "Remove from favorites"
+            : "Add to favorites"
+        }
+        name="favorite"
+        value={favorite ? "false" : "true"}
+      >
+        {favorite ? "★" : "☆"}
+      </button>
+    </Form>
+  );
+};

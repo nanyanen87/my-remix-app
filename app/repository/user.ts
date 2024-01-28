@@ -50,10 +50,14 @@ export const fetchOneUser = async (env: Env, id: number): Promise<User> => {
   // const stmt = await env.DB.prepare(`select * from users where id = ?1`).bind(id);
   // const res = await stmt.all();
   // console.dir(res.results[0], {depth: null});
-
-  const res = await env.DB.prepare(`select * from users where id = ?1`).bind(id).raw();
-  console.dir(res[0], {depth: null});
-  // console.log(res.results.map((r) => r.first));
-  return fetched;
+  const res = await env.DB.prepare(`select * from users where id = ?1`).bind(id).first() as User;
+  const user = {
+    id: res.id,
+    avatar: res.avatar,
+    first: res.first,
+    last: res.last,
+    twitter: res.twitter,
+  };
+  return user;
 }
 
